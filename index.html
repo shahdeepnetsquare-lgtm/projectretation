@@ -16,6 +16,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+ID:wght@100..400&display=swap" rel="stylesheet">
 </head>
 <style>
+    body {
+    margin: 0;
+    padding: 0;
+}
     .backmain{
         background-image: url(MainImage/backmain.jpg);
         background-size: cover;
@@ -106,13 +110,43 @@
         top: 50px;
         right: 300px;
     }
+      .img1 {
+        animation: moveBox 1.5s;
+    }
 
+    @keyframes moveBox {
+
+        0% {
+            transform: translateX(500px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+
+
+
+    }
     .img2 {
         position: absolute;
         top: 250px;
         right: 300px;
     }
+      .img2 {
+        animation: moveBox 1.5s;
+    }
 
+    @keyframes moveBox {
+
+        0% {
+            transform: translateX(500px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+
+    }
     .tree {
         display: flex;
         justify-content: end;
@@ -177,13 +211,30 @@
         line-height: 1.8;
         color: #5c5c68;
     }
-
+     
     .article1 {
         position: inline;
         top: 50px;
         transform: translateX(+50px);
         width: 390px;
         display: inline-block;
+    }
+    .cupcake {
+        animation: movecup 3s;
+    }
+
+    @keyframes movecup {
+        from {
+            transform: translateX(200px);
+        }
+
+        to {
+            transform: translateX(0px);
+        }
+    }
+
+    .minisec2 {
+        animation: move5 3s;
     }
 
     .head3 {
@@ -206,6 +257,18 @@
         width: 390px;
         display: inline-block;
     }
+       .coffeesec {
+        animation: movecoffee 3s;
+    }
+      @keyframes movecoffee {
+        from {
+            transform: translateX(-200px);
+        }
+
+        to {
+            transform: translateX(0px);
+        }
+    }
 
     .head4 {
         color: black;
@@ -215,7 +278,7 @@
         transform: translateX(+100px);
     }
 
-    .cofemake {
+     .cofemake {
         display: flex;
         position: relative;
         font-size: medium;
@@ -231,7 +294,19 @@
         width: 390px;
         display: inline-block;
     }
+     .article3 {
+        animation: move6 3s;
+    }
 
+    @keyframes move6 {
+        from {
+            transform: translateX(-200px);
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }
     .head5 {
         color: black;
         font-weight: bold;
@@ -242,7 +317,19 @@
     .coco {
         transform: translateX(+130px);
     }
+      .coco {
+        animation: rotate 3s;
+    }
 
+    @keyframes rotate {
+        from {
+            transform: rotate(-90deg)
+        }
+
+        to {
+            transform: rotate(0deg);
+        }
+    }
     .vid1 {
         height: auto;
         width: 250px;
