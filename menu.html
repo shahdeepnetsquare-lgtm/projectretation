@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+</head>
+<style>
+     body {
+    margin: 0;
+    padding: 0;
+}
+    .backmain{
+        background-image: url(MainImage/menuback.jpg);
+        background-size: cover;
+        height: 400px;
+        width: auto;
+        background-repeat: no-repeat;
+    }
+
+    .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .log {
+        color: white;
+        text-decoration: none;
+        font-style: italic;
+        font-family: "Playfair Display", serif;
+        opacity: 80%;
+        font-size: 20px;
+    }
+
+    .conreg {
+        transform: translateY(+50px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+
+    }
+
+    .navbar {
+        transform: translateY(+90px);
+    }
+
+    .seconddiv {
+        height: 200px;
+        width: 200px;
+        background-color: blue;
+    }
+
+    .list {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        color: white;
+    }
+
+    .link {
+        color: white;
+        text-decoration: none;
+        font-weight: light;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-bottom: 20px;
+    }
+
+    .link:hover {
+        color: blue;
+        scale: 1.2;
+        transition: 0.5s;
+    }
+        .menu {
+        position: sticky;
+        top: 0;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        background-color: white;
+    }
+      .menu-list {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+    }
+     .items {
+        color: black;
+        border: 1px solid black;
+        padding: 10px;
+        text-decoration: none;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    }
+
+    .items:hover{
+        color:blue;
+
+
+    }
+
+    /* coffee menu */
+      #coffee-menu {
+
+        width: 90%;
+        margin: 60px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+    }
+
+
+
+    .left {
+        width: 45%;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .left h1 {
+        font-size: 48px;
+        transform: translateY(-80px);
+        font-weight: bold;
+    }
+
+    .coffee-image img {
+        width: 100%;
+    }
+
+    /* RIGHT */
+
+    .right {
+        border: none;
+        width: 555px;
+        height: 411px;
+    }
+
+    .coffee-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 18px;
+
+    }
+
+    .coffee-item img {
+        width: 60px;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+    }
+
+    .title h3 {
+        font-size: 18px;
+        white-space: nowrap;
+        font-weight: 700;
+    }
+
+    .line {
+        flex: 1;
+        border-bottom: 2px dotted #555;
+        margin: 0 10px;
+    }
+
+    .price {
+        font-size: 20px;
+
+    }
+
+    .content p {
+        margin-top: 10px;
+        color: #666;
+        line-height: 1.7;
+        font-size: 15px;
+    }
+      
+       #coffee-menu {
+
+        width: 90%;
+        margin: 60px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+    }
+
+
+
+    .left {
+        width: 45%;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .left h1 {
+        font-size: 48px;
+        transform: translateY(-80px);
+        font-weight: bold;
+    }
+
+    .coffee-image img {
+        width: 100%;
+    }
+
+    /* RIGHT */
+
+    .right {
+        border: none;
+        width: 555px;
+        height: 411px;
+    }
+
+    .coffee-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 18px;
+
+    }
+
+    .coffee-item img {
+        width: 60px;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+    }
+
+    .title h3 {
+        font-size: 18px;
+        white-space: nowrap;
+        font-weight: 700;
+    }
+
+    .line {
+        flex: 1;
+        border-bottom: 2px dotted #555;
+        margin: 0 10px;
+    }
+
+    .price {
+        font-size: 20px;
+
+    }
+
+    .content p {
+        margin-top: 10px;
+        color: #666;
+        line-height: 1.7;
+        font-size: 15px;
+    }
+
+/* milk menu */
+
+ #milk-menu {
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 70px 0;
+    }
+
+    .mleft {
+        width: 48%;
+    }
+
+    .mright {
+        width: 48%;
+        text-align: center;
+    }
+
+    .mright h1 {
+        font-size: 55px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        letter-spacing: 2px;
+    }
+
+    .mmain-image {
+        width: 100%;
+        max-width: 520px;
+    }
+
+    .milk-item {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 35px;
+    }
+
+    .milk-item img {
+        width: 55px;
+        height: 55px;
+        object-fit: contain;
+    }
+
+    .mcontent {
+        width: 100%;
+    }
+
+    .mtitle {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .mtitle h3 {
+        font-size: 16px;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .mline {
+        flex: 1;
+        border-bottom: 2px dotted #777;
+    }
+
+    .mprice {
+        font-size: 18px;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    .mcontent p {
+        margin-top: 10px;
+        color: #666;
+        line-height: 1.7;
+        font-size: 14px;
+    }
+    
+    
+  #cocktail-menu {
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 80px 0;
+    }
+
+    .ctleft {
+        width: 48%;
+    }
+
+    .ctright {
+        width: 48%;
+    }
+
+    .ctleft h1 {
+        font-size: 55px;
+        margin-bottom: 35px;
+        font-weight: 700;
+    }
+
+    .ctmain-image {
+        width: 100%;
+        max-width: 520px;
+    }
+
+    .cocktail-item {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 35px;
+    }
+
+    .cocktail-item img {
+        width: 55px;
+        height: 55px;
+        object-fit: contain;
+    }
+
+    .ctcontent {
+        width: 100%;
+    }
+
+    .cttitle {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .cttitle h3 {
+        margin: 0;
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .ctline {
+        flex: 1;
+        border-bottom: 2px dotted #666;
+    }
+
+    .ctprice {
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    .ctcontent p {
+        margin-top: 10px;
+        color: #666;
+        line-height: 1.7;
+        font-size: 14px;
+    }
+
+
+
+
+    #beverages-menu {
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 80px 0;
+        flex-direction: row-reverse;
+    }
+
+    .bleft {
+        width: 48%;
+    }
+
+    .bright {
+        width: 48%;
+    }
+
+    .bleft h1 {
+        font-size: 55px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    .bmain-image {
+        width: 100%;
+        max-width: 520px;
+    }
+
+    .beverages-item {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 35px;
+    }
+
+    .beverages-item img {
+        width: 55px;
+        height: 55px;
+        object-fit: contain;
+    }
+
+    .bcontent {
+        width: 100%;
+    }
+
+    .btitle {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btitle h3 {
+        margin: 0;
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .bline {
+        flex: 1;
+        border-bottom: 2px dotted #666;
+    }
+
+    .bprice {
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    .bcontent p {
+        margin-top: 10px;
+        color: #666;
+        line-height: 1.7;
+        font-size: 14px;
+    }
+
+
+    #tea-menu {
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 80px 0;
+    }
+
+    .tleft {
+        width: 48%;
+    }
+
+    .tright {
+        width: 48%;
+        text-align: center;
+    }
+
+    .tright h1 {
+        font-size: 55px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    .tmain-image {
+        width: 100%;
+        max-width: 520px;
+    }
+
+    .tea-item {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 35px;
+    }
+
+    .tea-item img {
+        width: 55px;
+        height: 55px;
+        object-fit: contain;
+    }
+
+    .tcontent {
+        width: 100%;
+    }
+
+    .ttitle {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .ttitle h3 {
+        margin: 0;
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .tline {
+        flex: 1;
+        border-bottom: 2px dotted #666;
+    }
+
+    .tprice {
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    .tcontent p {
+        margin-top: 10px;
+        color: #666;
+        line-height: 1.7;
+        font-size: 14px;
+    }
+
+
+
+    #cake-menu {
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 80px 0;
+    }
+
+    .caleft {
+        width: 48%;
+    }
+
+    .caright {
+        width: 48%;
+        text-align: center;
+    }
+
+    .caright h1 {
+        font-size: 55px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    .camain-image {
+        width: 100%;
+        max-width: 520px;
+    }
+
+    .cake-item {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 35px;
+    }
+
+    .cake-item img {
+        width: 55px;
+        height: 55px;
+        object-fit: contain;
+    }
+
+    .cacontent {
+        width: 100%;
+    }
+
+    .catitle {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .catitle h3 {
+        margin: 0;
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .caline {
+        flex: 1;
+        border-bottom: 2px dotted #666;
+    }
+
+    .caprice {
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    .cacontent p {
+        margin-top: 10px;
+        color: #666;
+        line-height: 1.7;
+        font-size: 14px;
+    }
+
+    .coffee-menu {
+        animation: moveBox 3s;
+    }
+
+    @keyframes moveBox {
+
+        0% {
+            transform: translateX(-200px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+    .milk-menu {
+        animation: moveBox2 3s;
+    }
+
+    @keyframes moveBox2 {
+
+        0% {
+            transform: translateX(0200px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+        #cocktail-menu {
+        animation: moveBox3 3s;
+    }
+
+    @keyframes moveBox3 {
+
+        0% {
+            transform: translateX(-200px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+
+
+
+    }
+
+    #beverages-menu {
+        animation: moveBox4 3s;
+    }
+
+    @keyframes moveBox4 {
+
+        0% {
+            transform: translateX(0200px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+
+
+
+    }
+
+    #tea-menu {
+        animation: moveBox5 3s;
+    }
+
+    @keyframes moveBox5 {
+
+        0% {
+            transform: translateX(-200px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+
+
+
+    }
+
+    #cake-menu {
+        animation: moveBox6 3s;
+    }
+
+    @keyframes moveBox6 {
+
+        0% {
+            transform: translateX(200px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+
+
+
+    }
+     /* section last */
+    footer {
+        height: 416px;
+        background: #efe3d2;
+        padding: 40px 80px;
+    }
+
+    .aboutus {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    .headlast {
+        color: #000;
+        font-size: 25px;
+        font-weight: bolder;
+    }
+
+    .about p {
+        color: #666;
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    .contact {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 18px;
+        color: #666;
+    }
+
+    .contact i {
+        color: #666;
+        font-size: 22px;
+        margin-top: 2px;
+    }
+
+    .contact span {
+        line-height: 1.6;
+    }
+
+    .footer-box ul {
+        list-style: none;
+    }
+
+    .footer-box p {
+        color: #666;
+    }
+
+    .footer-box ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-box ul li a {
+        text-decoration: none;
+        color: #666;
+        transition: .3s;
+    }
+
+    .footer-box ul li a:hover {
+        color: #000;
+    }
+
+    .footer-box input {
+        width: 100%;
+        height: 42px;
+        margin-bottom: 12px;
+        border: 1px solid #d5c8b7;
+        background: transparent;
+        padding-left: 12px;
+        outline: none;
+        font-size: 15px;
+    }
+
+    .footer-box button {
+        background: #000;
+        color: #fff;
+        border: none;
+        padding: 12px 22px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: .3s;
+    }
+
+    .footer-box button:hover {
+        background: #333;
+    }
+
+    .button {
+        transform: translateY(+50px);
+    }
+
+    .lastsec {
+        position: absolute;
+
+    }
+</style>
+<body>
+    <!-- <section>1</section> -->
+
+<body style="background-color: white;">
+    <section class="backmain">
+        <header>
+            <div>
+                <div class="conreg">
+                    <section class="contacts">
+                        <a class="log" href="Find">Find</a>
+                        <a class="log" href="/Contacts">/Contacts</a>
+                    </section>
+                    <div class="the">
+                        <img src="MainImage/theretationmain.png" alt="0">
+                    </div>
+                    <section class="register">
+                        <a class="log" href="Login">Login</a>
+                        <a class="log" href="Register">/Register</a>
+                    </section>
+                </div>
+                <div class="navbar">
+                    <ul class="list">
+                        <li> <a class="link" href="#Home">HOME</a></li>
+                        <li> <a class="link" href="about.html">ABOUT</a></li>
+                        <li> <a class="link" href="#Menu">MENU</a></li>
+                        <li> <a class="link" href="#Galleries">GALLERIES</a></li>
+                        <li> <a class="link" href="#News&Events">NEWS & EVENTS</a></li>
+                        <li> <a class="link" href="#Contacts">CONTACTS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </section>
+
+     <!-- menu -->
+
+    <div class="menu">
+        <ul class="menu-list">
+            <li><a class="items" href="#coffee-menu">COFFEE</a></li>
+            <li><a class="items" href="#milk-menu">MILK</a></li>
+            <li><a class="items" href="#cocktail-menu">COCKTAILS</a></li>
+            <li><a class="items" href="#beverages-menu">BEVERAGES</a></li>
+            <li><a class="items" href="#tea-menu">TEA</a></li>
+            <li><a class="items" href="#cake-menu">CAKES</a></li>
+        </ul>
+    </div>
+
+       <!-- coffee menu -->
+        <section id="coffee-menu">
+
+
+        <div class="left">
+
+            <h1>COFFEE</h1>
+
+            <div class="coffee-image">
+                <img src="MainImage/coffeeimage.png" alt="">
+            </div>
+
+        </div>
+
+
+        <div class="right">
+
+            <div class="coffee-item">
+
+                <img src="MainImage/coffee-1.png" alt="">
+
+                <div class="content">
+
+                    <div class="title">
+
+                        <h3>COFFEE ICE</h3>
+
+                        <span class="line"></span>
+
+                        <span class="price">$29.00</span>
+
+                    </div>
+
+                    <p>
+                        Our selection of coffee beans have been rigorously tested
+                        with every different type of coffee machine to make.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="coffee-item">
+
+                <img src="MainImage/coffee-2.png" alt="">
+
+                <div class="content">
+
+                    <div class="title">
+
+                        <h3>COFFEE ICE MILK</h3>
+
+                        <span class="line"></span>
+
+                        <span class="price">$33.00</span>
+
+                    </div>
+
+                    <p>
+                        Coffee ice milk is the process that slowly and gradually
+                        releases the purest of essence.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="coffee-item">
+
+                <img src="MainImage/coffee-3.png" alt="">
+
+                <div class="content">
+
+                    <div class="title">
+
+                        <h3>HOT COFFEE</h3>
+
+                        <span class="line"></span>
+
+                        <span class="price">$29.00</span>
+
+                    </div>
+
+                    <p>
+                        Grown traditionally, harvested naturally and roasted lovingly,
+                        they're the star of every cup.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="coffee-item">
+
+                <img src="MainImage/coffee-4.png" alt="">
+
+                <div class="content">
+
+                    <div class="title">
+
+                        <h3>COFFEE SOCOLA</h3>
+
+                        <span class="line"></span>
+
+                        <span class="price">$29.00</span>
+
+                    </div>
+
+                    <p>
+                        Some start life in Africa, others in South America,
+                        but all end up close to our heart.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+     <!-- milk -->
+
+
+    <section id="milk-menu">
+
+        <!-- LEFT SIDE -->
+        <div class="mleft">
+
+            <div class="milk-item">
+
+                <img src="MainImage/milkli-1.png" alt="">
+
+                <div class="mcontent">
+
+                    <div class="mcontent">
+                        <h3>FRESH MILK</h3>
+                        <span class="mcontent"></span>
+                        <span class="mcontent">$39.00</span>
+                    </div>
+
+                    <p>
+                        Add Kahlua, crème de Menthe, crème de cacao,
+                        milk and ice to a blender and blend until smooth.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="milk-item">
+
+                <img src="MainImage/milkli-2.png" alt="">
+
+                <div class="mcontent">
+
+                    <div class="mtitle">
+                        <h3>MILK ICE</h3>
+                        <span class="mline"></span>
+                        <span class="mprice">$45.00</span>
+                    </div>
+
+                    <p>
+                        There should be some ice crystals in the glass and the
+                        drink will be light and frothy.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="milk-item">
+
+                <img src="MainImage/milkli-3.png" alt="">
+
+                <div class="mcontent">
+
+                    <div class="mtitle">
+                        <h3>MUDSLIDE RECIPE MILK</h3>
+                        <span class="mline"></span>
+                        <span class="mprice">$29.00</span>
+                    </div>
+
+                    <p>
+                        White creme de cacao and milk served blended
+                        in a chilled glass.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="milk-item">
+
+                <img src="MainImage/milkli-4.png" alt="">
+
+                <div class="mcontent">
+
+                    <div class="mtitle">
+                        <h3>SARATI LASSI MILK</h3>
+                        <span class="mline"></span>
+                        <span class="mprice">$39.00</span>
+                    </div>
+
+                    <p>
+                        Get the mixers out and shape your Saturday night
+                        party like an Aspri Spirits night.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="mright">
+
+            <h1>MILK</h1>
+
+            <img src="MainImage/milkimage.png" class="mmain-image" alt="">
+
+        </div>
+    </section>
+
+    <!-- cocktail -->
+       <section id="cocktail-menu">
+
+        <!-- LEFT SIDE -->
+
+        <div class="ctleft">
+
+            <h1>COCKTAIL</h1>
+
+            <img src="MainImage/menu-3.png" class="ctmain-image" alt="">
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="ctright">
+
+            <div class="cocktail-item">
+
+                <img src="MainImage/coctail-1.png" alt="">
+
+                <div class="ctcontent">
+
+                    <div class="cttitle">
+                        <h3>COCKTAIL MOSCOW MULE</h3>
+                        <span class="ctline"></span>
+                        <span class="ctprice">$29.00</span>
+                    </div>
+
+                    <p>
+                        Top with ginger beer and garnish with a lime wedge and a mint sprig.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="cocktail-item">
+
+                <img src="MainImage/coctail-2.png" alt="">
+
+                <div class="ctcontent">
+
+                    <div class="title">
+                        <h3>BULLFROG COCKTAIL</h3>
+                        <span class="ctline"></span>
+                        <span class="ctprice">$33.00</span>
+                    </div>
+
+                    <p>
+                        Add cocktail vodka, grapefruit and lime juice. Top up with ginger ale.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="cocktail-item">
+
+                <img src="MainImage/coctail-3.png" alt="">
+
+                <div class="ctcontent">
+
+                    <div class="cttitle">
+                        <h3>COCKTAIL ORANGES</h3>
+                        <span class="ctline"></span>
+                        <span class="ctprice">$33.00</span>
+                    </div>
+
+                    <p>
+                        Top up with orange juice. Garnish with a maraschino cherry and orange wedge.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="coffee-item">
+
+                <img src="MainImage/coctail-4.png" alt="">
+
+                <div class="ctcontent">
+
+                    <div class="cttitle">
+                        <h3>COCKTAIL DESSERT</h3>
+                        <span class="ctline"></span>
+                        <span class="ctprice">$45.00</span>
+                    </div>
+
+                    <p>
+                        Impress your guests with a summer cocktail dessert recipe.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- beverages -->
+    <section id="beverages-menu">
+
+        <!-- LEFT SIDE -->
+
+        <div class="bleft">
+
+            <h1>BEVERAGES</h1>
+
+            <img src="MainImage/menu-4.png" class="bmain-image" alt="">
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="bright">
+
+            <div class="beverages-item">
+
+                <img src="MainImage/br-1.png" alt="">
+
+                <div class="bcontent">
+
+                    <div class="title">
+                        <h3>ORANGE ICE</h3>
+                        <span class="bline"></span>
+                        <span class="bprice">$33.00</span>
+                    </div>
+
+                    <p>
+                        While I'm not generally into overly themed parties,
+                        especially the typical orange.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="beverages-item">
+
+                <img src="MainImage/br-2.png" alt="">
+
+                <div class="bcontent">
+
+                    <div class="btitle">
+                        <h3>MILK ICE</h3>
+                        <span class="bline"></span>
+                        <span class="bprice">$45.00</span>
+                    </div>
+
+                    <p>
+                        There should be some ice crystals in the glass and
+                        the drink will be light and frothy.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="beverages-item">
+
+                <img src="MainImage/br-3.png" alt="">
+
+                <div class="bcontent">
+
+                    <div class="title">
+                        <h3>CALYER ROYALE</h3>
+                        <span class="bline"></span>
+                        <span class="bprice">$33.00</span>
+                    </div>
+
+                    <p>
+                        Strawberries make a perfect choice because they're naturally sweet.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="beverages-item">
+
+                <img src="MainImage/br-4.png" alt="">
+
+                <div class="bcontent">
+
+                    <div class="btitle">
+                        <h3>LEMON ICE</h3>
+                        <span class="bline"></span>
+                        <span class="bprice">$33.00</span>
+                    </div>
+
+                    <p>
+                        Shake over ice, strain into a shot glass and garnish
+                        with a small orange slice.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- tea -->
+
+    <section id="tea-menu">
+
+        <!-- LEFT SIDE -->
+
+        <div class="tleft">
+
+            <div class="tea-item">
+
+                <img src="MainImage/tea-1.png" alt="">
+
+                <div class="tcontent">
+
+                    <div class="ttitle">
+                        <h3>TIPLE LEMON DROP</h3>
+                        <span class="tline"></span>
+                        <span class="tprice">$39.00</span>
+                    </div>
+
+                    <p>
+                        Combine the Lipton Ice Tea Lemon and the lemonade in a pitcher.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="tea-item">
+
+                <img src="MainImage/tea-2.png" alt="">
+
+                <div class="tcontent">
+
+                    <div class="title">
+                        <h3>CITRUS ICED TEA PUNCH</h3>
+                        <span class="tline"></span>
+                        <span class="tprice">$45.00</span>
+                    </div>
+
+                    <p>
+                        Combine Lipton Ice Tea Lemon with the orange juice in a large pitcher;
+                        stir in the sliced fruit.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="tea-item">
+
+                <img src="MainImage/tea-3.png" alt="">
+
+                <div class="content">
+
+                    <div class="ttitle">
+                        <h3>MINT TEA JULEPS</h3>
+                        <span class="tline"></span>
+                        <span class="tprice">$29.00</span>
+                    </div>
+
+                    <p>
+                        Thoroughly crush the mint with a wooden spoon on the side of the pitcher.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="tea-item">
+
+                <img src="MainImage/tea-4.png" alt="">
+
+                <div class="tcontent">
+
+                    <div class="title">
+                        <h3>PINA TEA-LA DA</h3>
+                        <span class="tline"></span>
+                        <span class="tprice">$39.00</span>
+                    </div>
+
+                    <p>
+                        Process all ingredients in a blender until smooth.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="right">
+
+            <h1>TEA</h1>
+
+            <img src="MainImage/menu-5.png" class="main-image" alt="">
+
+        </div>
+
+    </section>
+
+    <!-- cake -->
+
+
+    <section id="cake-menu">
+
+        <!-- LEFT SIDE -->
+
+        <div class="caleft">
+
+            <div class="cake-item">
+
+                <img src="MainImage/cake-1.png" alt="">
+
+                <div class="cacontent">
+
+                    <div class="catitle">
+                        <h3>CAKES COCOA</h3>
+                        <span class="caline"></span>
+                        <span class="caprice">$33.00</span>
+                    </div>
+
+                    <p>
+                        Indispensable for lovers of coffee tiramisu dessert.
+                        Special cake with cream and cocoa, powder lovers the choice
+                        of mild, sweet.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="cake-item">
+
+                <img src="MainImage/cake-2.png" alt="">
+
+                <div class="cacontent">
+
+                    <div class="catitle">
+                        <h3>CHOCOLATE GUINNESS CUPCAKES</h3>
+                        <span class="caline"></span>
+                        <span class="caprice">$33.00</span>
+                    </div>
+
+                    <p>
+                        The top of the cheesecake was covered in chocolate.
+                        Who wants to wake up from such a sweet dream.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="cake-item">
+
+                <img src="MainImage/cake-3.png" alt="">
+
+                <div class="content">
+
+                    <div class="catitle">
+                        <h3>BRICKLE CAKE</h3>
+                        <span class="caline"></span>
+                        <span class="caprice">$29.00</span>
+                    </div>
+
+                    <p>
+                        Brickle cake, chocolate taste the great passion of lovers.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="cake-item">
+
+                <img src="MainImage/cake-4.png" alt="">
+
+                <div class="cacontent">
+
+                    <div class="title">
+                        <h3>CHOCOLATE PARTICLE CAKE</h3>
+                        <span class="caline"></span>
+                        <span class="caprice">$29.00</span>
+                    </div>
+
+                    <p>
+                        Crispy cookie dough with chocolate chips and delicious flavor
+                        you will be addicted.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="right">
+
+            <h1>CAKE</h1>
+
+            <img src="MainImage/menu-6.png" class="main-image" alt="">
+
+        </div>
+
+    </section>
+     
+     <!-- Last section -->
+    <footer>
+        <div class="aboutus">
+            <div class="about">
+                <h2 class="headlast">About Us</h2>
+                <p>
+                    Anim pariatur cliche reprehenderit,
+                    enim eiusmod high life accusamus terry
+                    richardson ad squid.
+                </p>
+
+                <div class="contact">
+
+                    <i class="fa-solid fa-envelope"></i>
+                    <img src="MainImage/emailicon.png" alt="0">
+                    <span>hello@mtheme.org</span>
+                </div>
+                <div class="contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <img src="MainImage/phoneicon.png" alt="0">
+                    <span>+(84)123456789</span>
+                </div>
+                <div class="contact">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    <img src="MainImage/adddress.png" alt="0">
+                    <span>
+                        198 West 21th Street, Suite 721<br>
+                        New York NY 10010
+                    </span>
+                </div>
+            </div>
+            <!-- for buisnesss -->
+            <div class="footer-box">
+
+                <h2>FOR BUISNESS</h2>
+                <ul>
+                    <li><a href="#">Office Coffee</a></li>
+                    <li><a href="#">Food Service</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-box">
+
+                <h2>NEWSLETTER</h2>
+
+                <p>
+                    If you world like sign-up to the origin
+                    newsletter,please enter your email
+                    address below
+                </p>
+
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+
+                <button class="button">SUBSCRIBE</button>
+
+            </div>
+
+            <!-- Social -->
+
+            <div class="footer-box">
+
+                <h2>FOLLOW US</h2>
+
+                <p>
+                    Follow Origin on the following social
+                    network sites.
+                </p>
+
+                <div class="social">
+
+                    <a href="#"><i class="fab fa-facebook-f"> <img src="MainImage/facebook.png" alt=""></i></a>
+
+                    <a href="#"><i class="fab fa-twitter"> <img src="MainImage/twitter.png" alt=""></i></a>
+
+                    <a href="#"><i class="fab fa-google-plus-g"> <img class="google" src="MainImage/google.png"
+                                alt=""></i></a>
+
+                    <a href="#"><i class="fas fa-rss"></i> <img class="wifi" src="MainImage/wifi.png" alt=""></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+  </body>
+</html>
