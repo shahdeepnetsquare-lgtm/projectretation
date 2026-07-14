@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>about</title>
+</head>
+<style>
+    /* section1 */
+    body {
+        margin: 0 auto;
+    }
+
+    .background {
+        background-image: url(MainImage/goodmrng.jpg);
+        height: 390px;
+        background-size: cover;
+    }
+
+    .log {
+        color: white;
+        text-decoration: none;
+        font-style: italic;
+        font-family: "Playfair Display", serif;
+        opacity: 80%;
+        font-size: 20px;
+    }
+
+    .conreg {
+        transform: translateY(+50px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+
+    }
+
+    .navbar {
+        transform: translateY(+90px);
+    }
+
+    .seconddiv {
+        height: 200px;
+        width: 200px;
+        background-color: blue;
+    }
+
+    .list {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        color: white;
+    }
+
+    .link {
+        color: white;
+        text-decoration: none;
+        font-weight: light;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-bottom: 20px;
+    }
+
+    .link:hover {
+        color: blue;
+        scale: 1.2;
+        transition: 0.5s;
+    }
+
+    /* section2 */
+    .sec2 {
+        background-color: white;
+        height: 550px;
+        position: relative;
+    }
+
+    .welcome {
+        display: flex;
+        display: inline-block;
+        position: absolute;
+        top: 100px;
+        left: 50px;
+        font-size: 40px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .img1 {
+        position: absolute;
+        top: 50px;
+        right: 300px;
+    }
+
+    .img2 {
+        position: absolute;
+        top: 250px;
+        right: 300px;
+    }
+
+    .tree {
+        display: flex;
+        justify-content: end;
+        transform: translateX(100px);
+        width: 190vh;
+
+    }
+
+    .welcome aside {
+        width: 500px;
+        font-size: medium;
+        font-weight: 100;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #5c5c68;
+        line-height: 1.8;
+    }
+
+    .head {
+        font-family: "Montenegrin Gothic One", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    /* section 3 */
+    .sec3 {
+        background-color: #efe6da;
+        height: 447px;
+        position: relative;
+    }
+
+    .beanmachine {
+        height: 550px;
+        width: auto;
+        transform: translateX(+250px);
+    }
+
+    h5 {
+        font-family: 'proxima_nova_cn_ltsemibold';
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    h1 {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 40px;
+
+    }
+
+    .sec3 aside {
+        width: 650px;
+        position: absolute;
+        right: 100px;
+        transform: translateY(-500px);
+
+    }
+
+    .sec3 article {
+        color: #5c5c68;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    /* section 4 */
+    .sec4 {
+        background-color: #fff;
+    }
+
+    .leaf {
+        height: 350px;
+        width: auto;
+        transform: translateX(+900px) translateY(+80px);
+    }
+
+    .sec4 aside {
+        width: 650px;
+        position: absolute;
+        left: 100px;
+        transform: translateY(-230px);
+        text-align: center;
+        color: #5c5c68;
+    }
+
+    /* section5 */
+    .sec5 {
+        transform: translateY(+100px);
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .gallery img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .pers2 {
+        width: 300px;
+        height: 368px;
+    }
+
+    /* section6 */
+    .imgs {
+        height: 45%;
+        width: 380px;
+        position: relative;
+        transform: translateY(+120px);
+    }
+
+    .img01 {
+        position: absolute;
+        left: 20px;
+        z-index: 2;
+        height: 250px;
+        transform: translateY(+70px) translateX(+50px);
+    }
+
+    .img02 {
+        position: absolute;
+        transform: translateX(+200px);
+
+    }
+
+    .heading {
+        position: absolute;
+        transform: translateY(+100px) translateX(+900px);
+    }
+
+    .lastsec {
+        width: 650px;
+        position: absolute;
+        right: 100px;
+        transform: translateY(-500px) translateY(+700px);
+        color: #5c5c68;
+        font-size: 20px;
+    }
+
+    /* section last */
+    footer {
+        height: 416px;
+        background: #efe3d2;
+        padding: 40px 80px;
+        transform: translateY(+500px);
+    }
+
+    .aboutus {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    .headlast {
+        color: #000;
+        font-size: 25px;
+        font-weight: bolder;
+    }
+
+    .about p {
+        color: #666;
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    .contact {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 18px;
+        color: #666;
+    }
+
+    .contact i {
+        color: #666;
+        font-size: 22px;
+        margin-top: 2px;
+    }
+
+    .contact span {
+        line-height: 1.6;
+    }
+
+    .footer-box ul {
+        list-style: none;
+    }
+
+    .footer-box p {
+        color: #666;
+    }
+
+    .footer-box ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-box ul li a {
+        text-decoration: none;
+        color: #666;
+        transition: .3s;
+    }
+
+    .footer-box ul li a:hover {
+        color: #000;
+    }
+
+    .footer-box input {
+        width: 100%;
+        height: 42px;
+        margin-bottom: 12px;
+        border: 1px solid #d5c8b7;
+        background: transparent;
+        padding-left: 12px;
+        outline: none;
+        font-size: 15px;
+    }
+
+    .footer-box button {
+        background: #000;
+        color: #fff;
+        border: none;
+        padding: 12px 22px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: .3s;
+    }
+
+    .footer-box button:hover {
+        background: #333;
+    }
+
+    .button {
+        transform: translateY(+50px);
+    }
+
+    .lastsec {
+        position: absolute;
+
+    }
+</style>
+
+<body>
+    <!-- <section>1</section> -->
+    <section class="background">
+        <header>
+            <div>
+                <div class="conreg">
+                    <section class="contacts">
+                        <a class="log" href="Find">Find</a>
+                        <a class="log" href="/Contacts">/Contacts</a>
+                    </section>
+                    <div class="the">
+                        <img src="MainImage/theretation.png" alt="0">
+                    </div>
+                    <section class="register">
+                        <a class="log" href="Login">Login</a>
+                        <a class="log" href="Register">/Register</a>
+                    </section>
+                </div>
+                <div class="navbar">
+                    <ul class="list">
+                        <li> <a class="link" href="#Home">HOME</a></li>
+                        <li> <a class="link" href="#About">ABOUT</a></li>
+                        <li> <a class="link" href="#Menu">MENU</a></li>
+                        <li> <a class="link" href="#Galleries">GALLERIES</a></li>
+                        <li> <a class="link" href="#News&Events">NEWS & EVENTS</a></li>
+                        <li> <a class="link" href="#Contacts">CONTACTS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <!-- <section>2</section> -->
+    <section>
+        <div class="sec2">
+            <div class="tree">
+                <img src="MainImage/tree1 (1).jpg" </div>
+
+                <div class="welcome">
+                    <header class="head">WELCOME TO OUR </header>
+                    <header class="head">RETATION</header>
+                    <br>
+                    <div>
+                        <aside>
+                            Cmspresso is the process that slowly and gradually releases the purest of essence. As tea
+                            leaves
+                            unravel and coffee patiently drips, it is the best representation of the making of tea and
+                            coffee.
+                            We want the tea and coffee from Cmspresso to express their many levels of character through
+                            a
+                            thoughtful and caring hand.
+                            <br>
+                            <br>
+                            Cmspresso is a concept that we wish to pass for-ward. Cmspresso means a healthy and positive
+                            outlook
+                            for the adopters of this great attitude.
+                        </aside>
+                    </div>
+                </div>
+
+
+                <div class="image">
+                    <img class="img1" src="MainImage/firstpic.png" alt="0">
+                    <img class="img2" src="MainImage/secondpic.png" alt="0">
+                </div>
+    </section>
+    <!-- section3 -->
+    <div class="sec3">
+        <img class="beanmachine" src="MainImage/beanmachine.png" alt="0">
+
+        <aside>
+            <h1>OUR MISSION</h1>
+            <h5>We believe in sharing quality organic products that you can enjoy with confidence.</h5>
+            <article>We strive to nourish your body and respect the environment by certifying each of our products
+                organic and gluten free, using pure ingredients that are ethically sourced from around the world and
+                embracing sustainable, eco-friendly practices, always.</article>
+            <br>
+            <h5>In all that we do, we aim for goodness.</h5>
+            <article>Whether you are dedicated to a wholesome, organic lifestyle, are dabbling in a gluten free diet or
+                enjoy using the freshest and most expansive variety of spices in your culinary creations, we want you to
+                empower your creativity and wellness with quality organic ingredients and help you feel good about your
+                food choices.</article>
+        </aside>
+    </div>
+    <!-- section4 -->
+    <div class="sec4">
+        <img class="leaf" src="MainImage/coffeeleaf2.png" alt="0">
+
+
+        <aside>
+            <h1 style="text-align: center;">Our Promise</h1>
+            <article>Over time, we saw others trying to cut corners, and we vowed to work harder to make food that you
+                can
+                trust. As GMO’s, MSG, fillers, sweeteners and irradiation became increasingly common elsewhere, we
+                deepened
+                our commitment to our customers and to the planet. By 2007, we achieved our 100% Organic Certification,
+                and
+                in the following months we increased our line to include Certified Fair Trade, Kosher, Vegan, and Gluten
+                Free products. In 2012, we developed a line of EcoShakers, a spice container that is 100% recyclable.
+            </article>
+        </aside>
+    </div>
+    <!-- section5 -->
+    <div class="sec5">
+        <img src="MainImage/pers1.jpg" alt="0">
+        <img class="pers2" src="MainImage/pers2.jpg" alt="0">
+        <img src="MainImage/pers3.jpg" alt="0">
+        <img src="MainImage/pers4.jpg" alt="0">
+        <img src="MainImage/pers5.jpg" alt="0">
+    </div>
+
+    <!-- section 6 -->
+    <section>
+        <div class="sec6">
+            <div class="imgs">
+                <img class="img01" src="MainImage/cig.png" alt="0">
+                <img class="img02" src="MainImage/cig2.png" alt="0">
+            </div>
+            <h1 class="heading">OUR METHODS</h1>
+            <aside class="lastsec">We import 100% organic spices using Fair Trade options whenever available. All
+                imported spices are required to go through a sterilization process before being sold in the United
+                States. Most spice companies sterilize using synthetic chemicals or radiation. Spicely Organics uses a
+                process called steam sterilization, which sterilizes food products without adding any chemicals or
+                hazardous materials.
+                <br>
+                <br>
+                Worldwide, we have over 50 passionate employees and counting. In 2012, we opened our first ever Spicely
+                Boutique, located in downtown San Francisco.
+            </aside>
+        </div>
+    </section>
+    <!-- Last section -->
+    <footer>
+        <div class="aboutus">
+            <div class="about">
+                <h2 class="headlast">About Us</h2>
+                <p>
+                    Anim pariatur cliche reprehenderit,
+                    enim eiusmod high life accusamus terry
+                    richardson ad squid.
+                </p>
+
+                <div class="contact">
+
+                    <i class="fa-solid fa-envelope"></i>
+                    <img src="MainImage/emailicon.png" alt="0">
+                    <span>hello@mtheme.org</span>
+                </div>
+                <div class="contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <img src="MainImage/phoneicon.png" alt="0">
+                    <span>+(84)123456789</span>
+                </div>
+                <div class="contact">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    <img src="MainImage/adddress.png" alt="0">
+                    <span>
+                        198 West 21th Street, Suite 721<br>
+                        New York NY 10010
+                    </span>
+                </div>
+            </div>
+            <!-- for buisnesss -->
+            <div class="footer-box">
+
+                <h2>FOR BUISNESS</h2>
+                <ul>
+                    <li><a href="#">Office Coffee</a></li>
+                    <li><a href="#">Food Service</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-box">
+
+                <h2>NEWSLETTER</h2>
+
+                <p>
+                    If you world like sign-up to the origin
+                    newsletter,please enter your email
+                    address below
+                </p>
+
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+
+                <button class="button">SUBSCRIBE</button>
+
+            </div>
+
+            <!-- Social -->
+
+            <div class="footer-box">
+
+                <h2>FOLLOW US</h2>
+
+                <p>
+                    Follow Origin on the following social
+                    network sites.
+                </p>
+
+                <div class="social">
+
+                    <a href="#"><i class="fab fa-facebook-f"> <img src="MainImage/facebook.png" alt=""></i></a>
+
+                    <a href="#"><i class="fab fa-twitter"> <img src="MainImage/twitter.png" alt=""></i></a>
+
+                    <a href="#"><i class="fab fa-google-plus-g"> <img class="google" src="MainImage/google.png"
+                                alt=""></i></a>
+
+                    <a href="#"><i class="fas fa-rss"></i> <img class="wifi" src="MainImage/wifi.png" alt=""></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>
