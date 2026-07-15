@@ -3,9 +3,600 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gallery</title>
 </head>
+<style>
+       body {
+    margin: 0;
+    padding: 0;
+}
+    .backmain{
+        background-image: url(MainImage/gallery.jpg);
+        background-size: cover;
+        height: 400px;
+        width: auto;
+        background-repeat: no-repeat;
+    }
+
+    .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .log {
+        color: white;
+        text-decoration: none;
+        font-style: italic;
+        font-family: "Playfair Display", serif;
+        opacity: 80%;
+        font-size: 20px;
+    }
+
+    .conreg {
+        transform: translateY(+50px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+
+    }
+
+    .navbar {
+        transform: translateY(+90px);
+    }
+
+    .list {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        color: white;
+    }
+
+    .link {
+        color:white;
+        text-decoration: none;
+        font-weight: light;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-bottom: 20px;
+    }
+
+    .link:hover {
+        color: blue;
+        scale: 1.2;
+        transition: 0.5s;
+    }
+        .menu {
+        position: sticky;
+        top: 0;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        background-color: white;
+    }
+      .menu-list {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+    }
+     .items {
+        color: black;
+        border: 1px solid black;
+        padding: 10px;
+        text-decoration: none;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    }
+
+    .items:hover{
+        color: blue;
+
+
+    }
+  .gallery {
+        width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 25px;
+        row-gap: 35px;
+    }
+
+    .mitem img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .mitem p {
+        margin-top: 10px;
+        font-size: 15px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-transform: uppercase;
+        color: #333;
+
+    }
+
+    .mitem {
+        transition: 0.3s;
+    }
+
+    .mitem:hover {
+        transform: translateY(-5px);
+    }
+
+    .mitem:hover img {
+        opacity: .85;
+    }
+
+     footer {
+        height: 416px;
+        background: #efe3d2;
+        padding: 40px 80px;
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    .footer-box h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #111;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+
+    }
+
+    .footer-box p {
+        color: #666;
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    .contact {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 18px;
+        color: #666;
+    }
+
+    .contact i {
+        color: #666;
+        font-size: 22px;
+        margin-top: 2px;
+    }
+
+    .contact span {
+        line-height: 1.6;
+    }
+
+    .footer-box ul {
+        list-style: none;
+    }
+
+    .footer-box ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-box ul li a {
+        text-decoration: none;
+        color: #666;
+        transition: .3s;
+    }
+
+    .footer-box ul li a:hover {
+        color: #000;
+    }
+
+    .footer-box input {
+        width: 100%;
+        height: 42px;
+        margin-bottom: 12px;
+        border: 1px solid #d5c8b7;
+        background: transparent;
+        padding-left: 12px;
+        outline: none;
+        font-size: 15px;
+    }
+
+    .footer-box button {
+        background: #000;
+        color: #fff;
+        border: none;
+        padding: 12px 22px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: .3s;
+    }
+
+    .footer-box button:hover {
+        background: #333;
+    }
+
+    .social {
+        display: flex;
+        gap: 10px;
+    }
+
+    .social a {
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: #000;
+        font-size: 18px;
+
+    }
+
+    .google {
+        height: 40px;
+    }
+
+    .wifi {
+        transform: rotate(45deg);
+    }
+
+    /* tab  */
+      @media (max-width: 1024px) {
+
+    .logodiv{
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .con{
+        flex-direction: column;
+        gap: 20px;
+        transform: none;
+    }
+
+    .list{
+        transform: none;
+        margin-top: 30px;
+    }
+
+    .nav-list{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .menu-list{
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .gallery{
+        width: 95%;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+
+    .mitem img{
+        height: 220px;
+    }
+
+    footer{
+        height: auto;
+        padding: 40px 30px;
+    }
+
+    .footer-container{
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .logodiv{
+        height: auto;
+        padding: 20px 15px;
+    }
+
+    .con{
+        flex-direction: column;
+        gap: 15px;
+        transform: none;
+        text-align: center;
+    }
+
+    .con img{
+        width: 160px;
+    }
+
+    .list{
+        transform: none;
+        margin-top: 20px;
+    }
+
+    .nav-list{
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .link{
+        font-size: 15px;
+    }
+
+    .menu{
+        position: static;
+        padding: 15px; 
+        display: none;
+    }
+
+    .menu-list{
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .item{
+        display: block;
+        width: 180px;
+        text-align: center;
+    }
+
+    .gallery{ padding-top: 20px;
+        width: 95%;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+
+    .mitem img{
+        height: auto;
+    }
+
+    footer{
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .footer-container{
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-box{
+        text-align: center;
+    }
+
+    .contact{
+        justify-content: center;
+    }
+
+    .social{
+        justify-content: center;
+    }
+}
+
+</style>
 <body>
-    
+       <!-- <section>1</section> -->
+
+<body style="background-color: white;">
+    <section class="backmain">
+        <header>
+            <div>
+                <div class="conreg">
+                    <section class="contacts">
+                        <a class="log" href="Find">Find</a>
+                        <a class="log" href="/Contacts">/Contacts</a>
+                    </section>
+                    <div class="the">
+                        <img src="MainImage/theretationmain.png" alt="0">
+                    </div>
+                    <section class="register">
+                        <a class="log" href="Login">Login</a>
+                        <a class="log" href="Register">/Register</a>
+                    </section>
+                </div>
+                <div class="navbar">
+                    <ul class="list">
+                        <li> <a class="link" href="index.html">HOME</a></li>
+                        <li> <a class="link" href="about.html">ABOUT</a></li>
+                        <li> <a class="link" href="menu.html">MENU</a></li>
+                        <li> <a class="link" href="gallery.html">GALLERIES</a></li>
+                        <li> <a class="link" href="#News&Events">NEWS & EVENTS</a></li>
+                        <li> <a class="link" href="#Contacts">CONTACTS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </section>
+
+     <!-- menu -->
+
+    <div class="menu">
+        <ul class="menu-list">
+             <li><a class="items" href="#cake-menu">ALL</a></li>
+            <li><a class="items" href="#coffee-menu">COFFEE</a></li>
+            <li><a class="items" href="#milk-menu">MILK</a></li>
+            <li><a class="items" href="#cocktail-menu">COCKTAILS</a></li>
+            <li><a class="items" href="#beverages-menu">BEVERAGES</a></li>
+            <li><a class="items" href="#tea-menu">TEA</a></li>
+        </ul>
+    </div>
+     <!-- main -->
+    <div class="gallery">
+
+        <div class="mitem">
+            <img src="MainImage/gallery1.jpg" alt="">
+            <p>CONSECTETUR ADIPISICING ELIT</p>
+        </div>
+
+        <div class="mitem">
+            <img src="MainImage/galllery2.jpg" alt="">
+            <p>JUSTO EUISMOD FAUCIBUS ELEIFEND</p>
+        </div>
+
+        <div class="mitem">
+            <img src="MainImage/gallery3.jpg" alt="">
+            <p>INVENTORE VERITATIS QUASI</p>
+        </div>
+
+        <div class="mitem">
+            <img src="MainImage/gallery4.jpg" alt="">
+            <p>VOLUPTATEM SEQUI NESCIUNT</p>
+        </div>
+
+        <div class="mitem">
+            <img src="MainImage/gallery5.jpg" alt="">
+            <p>JUSTO EUISMOD FAUCIBUS ELEIFEND</p>
+        </div>
+
+        <div class="mitem">
+            <img src="MainImage/gallery6.jpg" alt="">
+            <p>PERSPICIATIS UNDE OMNIS</p>
+        </div>
+
+        <div class="mitem">
+            <img src="MainImage/gallery7.jpg" alt="">
+            <p>OMNIS ISTE NATUS ERROR</p>
+        </div>
+
+        <div class="mitem">
+            <img src="MainImage/gallery8.jpg" alt="">
+            <p>EAQUE IPSA QUAE</p>
+        </div>
+
+        <div class="mitem">
+            <img src="MainImage/gallery9.jpg" alt="">
+            <p>QUAS ARCHITECTO BEATAE</p>
+        </div>
+
+        <div class="mitem">
+            <img src="MainImage/gallery10.jpg" alt="">
+            <p>MAGNI DOLORES EOS</p>
+        </div>
+
+        <div class="mitem">
+            <img src="MainImage/gallery11.jpg" alt="">
+            <p>ASPERNATUR AUT ODIT AUT</p>
+        </div>
+
+        <div class="mitem">
+            <img src="MainImage/gallery12.jpg" alt="">
+            <p>RATIONE VOLUPTATEM</p>
+        </div>
+
+    </div>
+
+     <!-- footer -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <!-- About -->
+            <div class="footer-box">
+                <h2>ABOUT US</h2>
+
+                <p>
+                    Anim pariatur cliche reprehenderit,
+                    enim eiusmod high life accusamus terry
+                    richardson ad squid.
+                </p>
+
+                <div class="contact">
+                    <i class="fa-solid fa-envelope"></i>
+                    <img src="image/icons8-mail-24.png" alt="">
+                    <span>hello@mtheme.org</span>
+                </div>
+
+                <div class="contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <img src="image/icons8-phone-30.png" alt="">
+                    <span>+(84)123456789</span>
+                </div>
+
+                <div class="contact">
+                    <i class="fa-solid fa-house"></i>
+                    <img src="image/icons8-home-30.png" alt="">
+                    <span>
+                        198 West 21th Street, Suite 721<br>
+                        New York NY 10010
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- Business -->
+
+            <div class="footer-box">
+
+                <h2>FOR BUSINESS</h2>
+
+                <ul>
+                    <li><a href="#">Office Coffee</a></li>
+                    <li><a href="#">Food Service</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Newsletter -->
+
+            <div class="footer-box">
+
+                <h2>NEWSLETTER</h2>
+
+                <p>
+                    If you world like sign-up to the origin
+                    newsletter,please enter your email
+                    address below
+                </p>
+
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+
+                <button>SUBSCRIBE</button>
+
+            </div>
+
+            <!-- Social -->
+
+            <div class="footer-box">
+
+                <h2>FOLLOW US</h2>
+
+                <p>
+                    Follow Origin on the following social
+                    network sites.
+                </p>
+
+                <div class="social">
+
+                    <a href="#"><i class="fab fa-facebook-f"> <img src="MainImage/facebook.png" alt=""></i></a>
+
+                    <a href="#"><i class="fab fa-twitter"> <img src="MainImage/twitter.png" alt=""></i></a>
+
+                    <a href="#"><i class="fab fa-google-plus-g"> <img class="google" src="MainImage/google.png"
+                                alt=""></i></a>
+
+                    <a href="#"><i class="fas fa-rss"></i> <img class="wifi" src="MainImage/wifi.png" alt=""></a>
+
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
 </body>
 </html>
