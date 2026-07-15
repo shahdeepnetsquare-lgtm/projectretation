@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+    <title>Event</title>
 </head>
 <style>
-       body {
+      body {
     margin: 0;
     padding: 0;
 }
-    .backmain{
-        background-image: url(MainImage/gallery.jpg);
+     .backmain{
+        background-image: url(MainImage/event.jpg);
         background-size: cover;
         height: 400px;
         width: auto;
@@ -47,6 +47,12 @@
         transform: translateY(+90px);
     }
 
+    .seconddiv {
+        height: 200px;
+        width: 200px;
+        background-color: blue;
+    }
+
     .list {
         display: flex;
         justify-content: center;
@@ -58,7 +64,7 @@
     }
 
     .link {
-        color:white;
+        color: white;
         text-decoration: none;
         font-weight: light;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -70,74 +76,92 @@
         scale: 1.2;
         transition: 0.5s;
     }
-        .menu {
-        position: sticky;
-        top: 0;
-        padding-top: 30px;
-        padding-bottom: 20px;
-        background-color: white;
-    }
-      .menu-list {
-        display: flex;
-        justify-content: center;
-        gap: 60px;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-
-    }
-     .items {
-        color: black;
-        border: 1px solid black;
-        padding: 10px;
-        text-decoration: none;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-    }
-
-    .items:hover{
-        color: blue;
 
 
-    }
-  .gallery {
-        width: 1200px;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 25px;
-        row-gap: 35px;
-    }
+      .blog{
+    width:90%;
+    margin:50px auto;
+    display:flex;
+    align-items:center;
+    gap:50px;
+}
 
-    .mitem img {
-        width: 100%;
-        height: 170px;
-        object-fit: cover;
-        display: block;
-    }
 
-    .mitem p {
-        margin-top: 10px;
-        font-size: 15px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        text-transform: uppercase;
-        color: #333;
 
-    }
+.blog-image{
+    flex:1.2;
+}
 
-    .mitem {
-        transition: 0.3s;
-    }
+.blog-image img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    display:block;
+}
 
-    .mitem:hover {
-        transform: translateY(-5px);
-    }
 
-    .mitem:hover img {
-        opacity: .85;
-    }
 
-     footer {
+.blog-content{
+    flex:1;
+}
+
+.date{
+    display:flex;
+    align-items:flex-end;
+    margin-bottom:20px;
+}
+
+.day{
+    font-size:70px;
+    color:#585869;
+    font-weight:300;
+    line-height:1;
+}
+
+.month{
+    font-size:30px;
+    color:#666;
+    margin-left:8px;
+    margin-bottom:10px;
+    font-weight:300;
+}
+
+.blog-content h2{
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom:25px;
+    color:#111;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+.blog-content p{
+    color:#777;
+   
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height:1.9;
+    margin-bottom:35px;
+}
+
+.line{
+    
+    height:2px;
+    background:#000;
+    margin-bottom:30px;
+}
+
+.meta{
+    color:#888;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.meta strong{
+    color:#222;
+    font-weight:500;
+    
+}
+
+ footer {
         height: 416px;
         background: #efe3d2;
         padding: 40px 80px;
@@ -251,144 +275,170 @@
     .wifi {
         transform: rotate(45deg);
     }
+    hr{width: 80%;}
 
-    /* tab  */
-      @media (max-width: 1024px) {
+    /* tab */
+    @media (max-width:1024px){
 
     .logodiv{
-        height: auto;
-        padding: 30px 20px;
+        height:auto;
+        padding:30px 20px;
     }
 
     .con{
-        flex-direction: column;
-        gap: 20px;
-        transform: none;
+        flex-direction:column;
+        gap:20px;
+        transform:none;
     }
 
     .list{
-        transform: none;
-        margin-top: 30px;
+        transform:none;
+        margin-top:25px;
     }
 
     .nav-list{
-        flex-wrap: wrap;
-        gap: 20px;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:20px;
     }
 
-    .menu-list{
-        flex-wrap: wrap;
-        gap: 15px;
+    .blog{
+        width:95%;
+        gap:30px;
     }
 
-    .gallery{
-        width: 95%;
-        grid-template-columns: repeat(2,1fr);
-        gap: 20px;
+    .blog-image img{
+        height:280px;
     }
 
-    .mitem img{
-        height: 220px;
+    .day{
+        font-size:55px;
     }
 
-    footer{
-        height: auto;
-        padding: 40px 30px;
+    .month{
+        font-size:24px;
     }
 
     .footer-container{
-        grid-template-columns: repeat(2,1fr);
-        gap: 30px;
+        grid-template-columns:repeat(2,1fr);
+        gap:30px;
+    }
+
+    footer{
+        height:auto;
+        padding:40px 30px;
     }
 }
 
-@media (max-width: 767px) {
+/* phone */
+@media (max-width:767px){
 
     .logodiv{
-        height: auto;
-        padding: 20px 15px;
+        height:auto;
+        padding:20px 15px;
     }
 
     .con{
-        flex-direction: column;
-        gap: 15px;
-        transform: none;
-        text-align: center;
+        flex-direction:column;
+        gap:15px;
+        transform:none;
+        text-align:center;
     }
 
     .con img{
-        width: 160px;
+        width:160px;
     }
 
     .list{
-        transform: none;
-        margin-top: 20px;
+        transform:none;
+        margin-top:20px;
     }
 
     .nav-list{
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
+        flex-direction:column;
+        align-items:center;
+        gap:15px;
     }
 
     .link{
-        font-size: 15px;
+        font-size:15px;
     }
 
-    .menu{
-        position: static;
-        padding: 15px; 
-        display: none;
+    .blog{
+        width:95%;
+        flex-direction:column;
+        gap:25px;
     }
 
-    .menu-list{
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
+    .blog-image{
+        width:100%;
     }
 
-    .item{
-        display: block;
-        width: 180px;
-        text-align: center;
+    .blog-image img{
+        width:100%;
+        height:auto;
     }
 
-    .gallery{ padding-top: 20px;
-        width: 95%;
-        grid-template-columns: repeat(2,1fr);
-        gap: 20px;
+    .blog-content{
+        width:100%;
     }
 
-    .mitem img{
-        height: auto;
+    .date{
+        justify-content:center;
+    }
+
+    .day{
+        font-size:50px;
+    }
+
+    .month{
+        font-size:22px;
+    }
+
+    .blog-content h2{
+        font-size:22px;
+        text-align:center;
+    }
+
+    .blog-content p,
+    .meta{
+        text-align:center;
+    }
+
+    .line{
+        width:100%;
     }
 
     footer{
-        height: auto;
-        padding: 30px 20px;
+        height:auto;
+        padding:30px 20px;
     }
 
     .footer-container{
-        grid-template-columns: 1fr;
-        gap: 30px;
+        grid-template-columns:1fr;
+        gap:30px;
     }
 
     .footer-box{
-        text-align: center;
+        text-align:center;
     }
 
     .contact{
-        justify-content: center;
+        justify-content:center;
     }
 
     .social{
-        justify-content: center;
+        justify-content:center;
+    }
+
+    hr{
+        width:95%;
     }
 }
 
 </style>
-<body>
-       <!-- <section>1</section> -->
+<body> */
+    <!-- <section>1</section> -->
 
 <body style="background-color: white;">
     <section class="backmain">
@@ -421,84 +471,199 @@
         </header>
     </section>
 
-     <!-- menu -->
+       <!-- main -->
+<div>
+    <section class="blog">
 
-    <div class="menu">
-        <ul class="menu-list">
-             <li><a class="items" href="#cake-menu">ALL</a></li>
-            <li><a class="items" href="#coffee-menu">COFFEE</a></li>
-            <li><a class="items" href="#milk-menu">MILK</a></li>
-            <li><a class="items" href="#cocktail-menu">COCKTAILS</a></li>
-            <li><a class="items" href="#beverages-menu">BEVERAGES</a></li>
-            <li><a class="items" href="#tea-menu">TEA</a></li>
-        </ul>
+   
+    <div class="blog-image">
+        <img src="MainImage/ev1.jpg" alt="Dessert">
     </div>
-     <!-- main -->
-    <div class="gallery">
 
-        <div class="mitem">
-            <img src="MainImage/gallery1.jpg" alt="">
-            <p>CONSECTETUR ADIPISICING ELIT</p>
+    <div class="blog-content">
+
+        <div class="date">
+            <span class="day">05</span>
+            <span class="month">/may</span>
         </div>
 
-        <div class="mitem">
-            <img src="MainImage/galllery2.jpg" alt="">
-            <p>JUSTO EUISMOD FAUCIBUS ELEIFEND</p>
-        </div>
+        <h2>CONSECTETUR ADIPISCING ELIT</h2>
 
-        <div class="mitem">
-            <img src="MainImage/gallery3.jpg" alt="">
-            <p>INVENTORE VERITATIS QUASI</p>
-        </div>
+        <p>
+            Sed ut perspiciatis unde omnis iste natus error sit sed quia
+            consequuntur magni dolores eos nesciunt. Sed ut perspiciatis unde
+            omnis iste natus error sit voluptatem accusantium doloremque...
+        </p>
 
-        <div class="mitem">
-            <img src="MainImage/gallery4.jpg" alt="">
-            <p>VOLUPTATEM SEQUI NESCIUNT</p>
-        </div>
+        <div class="line"></div>
 
-        <div class="mitem">
-            <img src="MainImage/gallery5.jpg" alt="">
-            <p>JUSTO EUISMOD FAUCIBUS ELEIFEND</p>
-        </div>
-
-        <div class="mitem">
-            <img src="MainImage/gallery6.jpg" alt="">
-            <p>PERSPICIATIS UNDE OMNIS</p>
-        </div>
-
-        <div class="mitem">
-            <img src="MainImage/gallery7.jpg" alt="">
-            <p>OMNIS ISTE NATUS ERROR</p>
-        </div>
-
-        <div class="mitem">
-            <img src="MainImage/gallery8.jpg" alt="">
-            <p>EAQUE IPSA QUAE</p>
-        </div>
-
-        <div class="mitem">
-            <img src="MainImage/gallery9.jpg" alt="">
-            <p>QUAS ARCHITECTO BEATAE</p>
-        </div>
-
-        <div class="mitem">
-            <img src="MainImage/gallery10.jpg" alt="">
-            <p>MAGNI DOLORES EOS</p>
-        </div>
-
-        <div class="mitem">
-            <img src="MainImage/gallery11.jpg" alt="">
-            <p>ASPERNATUR AUT ODIT AUT</p>
-        </div>
-
-        <div class="mitem">
-            <img src="MainImage/gallery12.jpg" alt="">
-            <p>RATIONE VOLUPTATEM</p>
+        <div class="meta">
+            Post by <strong>mTheme</strong> /
+            Coffee /
+            7 comments
         </div>
 
     </div>
 
-     <!-- footer -->
+</section>
+</div>
+
+
+
+
+
+<div>
+    <section class="blog">
+
+    <div class="blog-image">
+        <img src="MainImage/ev2.jpg" alt="Ice Cream">
+    </div>
+
+    <div class="blog-content">
+
+        <div class="date">
+            <span class="day">05</span>
+            <span class="month">/may</span>
+        </div>
+
+        <h2>CONSECTETUR ADIPISCING ELIT</h2>
+
+        <p>
+            Sed ut perspiciatis unde omnis iste natus error sit sed quia
+            consequuntur magni dolores eos nesciunt. Sed ut perspiciatis unde
+            omnis iste natus error sit voluptatem accusantium doloremque...
+        </p>
+
+        <div class="line"></div>
+
+        <div class="meta">
+            Post by <strong>mTheme</strong> /
+            Coffee /
+            7 comments
+        </div>
+
+    </div>
+
+</section>
+</div>
+
+
+
+
+<div><section class="blog">
+
+  
+    <div class="blog-image">
+        <img src="MainImage/ev3.jpg" alt="Coffee">
+    </div>
+
+   
+    <div class="blog-content">
+
+        <div class="date">
+            <span class="day">05</span>
+            <span class="month">/may</span>
+        </div>
+
+        <h2>CONSECTETUR ADIPISCING ELIT</h2>
+
+        <p>
+            Sed ut perspiciatis unde omnis iste natus error sit sed quia
+            consequuntur magni dolores eos nesciunt. Sed ut perspiciatis unde
+            omnis iste natus error sit voluptatem accusantium doloremque...
+        </p>
+
+        <div class="line"></div>
+
+        <div class="meta">
+            Post by <strong>mTheme</strong> /
+            Coffee /
+            7 comments
+        </div>
+
+    </div>
+
+</section>
+</div>
+
+
+<div>
+    <section class="blog">
+
+   
+    <div class="blog-image">
+        <img src="MainImage/ev4.jpg" alt="Barista Coffee">
+    </div>
+
+    <div class="blog-content">
+
+        <div class="date">
+            <span class="day">05</span>
+            <span class="month">/may</span>
+        </div>
+
+        <h2>CONSECTETUR ADIPISCING ELIT</h2>
+
+        <p>
+            Sed ut perspiciatis unde omnis iste natus error sit sed quia
+            consequuntur magni dolores eos nesciunt. Sed ut perspiciatis unde
+            omnis iste natus error sit voluptatem accusantium doloremque...
+        </p>
+
+        <div class="line"></div>
+
+        <div class="meta">
+            Post by <strong>mTheme</strong> /
+            Coffee /
+            7 comments
+        </div>
+
+    </div>
+
+</section>
+</div>
+
+
+
+<div>
+    <section class="blog">
+
+    
+    <div class="blog-image">
+        <img src="MainImage/ev5.jpg" alt="Breakfast">
+    </div>
+
+  
+    <div class="blog-content">
+
+        <div class="date">
+            <span class="day">05</span>
+            <span class="month">/may</span>
+        </div>
+
+        <h2>CONSECTETUR ADIPISCING ELIT</h2>
+
+        <p>
+            Sed ut perspiciatis unde omnis iste natus error sit sed quia
+            consequuntur magni dolores eos nesciunt. Sed ut perspiciatis unde
+            omnis iste natus error sit voluptatem accusantium doloremque...
+        </p>
+
+        <div class="line"></div>
+
+        <div class="meta">
+            Post by <strong>mTheme</strong> /
+            Coffee /
+            7 comments
+        </div>
+
+    </div>
+</section>
+</div>
+<hr>
+<br>
+
+   <!-- footer -->
 
     <footer>
 
